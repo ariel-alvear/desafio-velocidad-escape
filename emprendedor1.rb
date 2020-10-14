@@ -6,9 +6,9 @@
 
 #en caso de que la rentabilidad sea positiva, aplicar 35% impuesto
 
-price = ARGV[0].to_i
-users = ARGV[1].to_i
-expenses = ARGV[2].to_i
+price = ARGV[0].to_f
+users = ARGV[1].to_f
+expenses = ARGV[2].to_f
 
 rentability = ((price * users) - expenses)
 
