@@ -16,19 +16,11 @@
 player = ARGV[0]
 random_answer = ["piedra", "papel", "tijera"].sample
 if player == random_answer
-  puts "Empataste, porque el computador jugó #{random_answer}"
-elsif player == "piedra" && random_answer == "papel"
-  puts "Perdiste, porque el computador jugó #{random_answer}"
-elsif player == "piedra" && random_answer == "tijera"
-  puts "Ganaste, porque el computador jugó #{random_answer}"
-elsif player == "tijera" && random_answer == "papel"
-  puts "Ganaste, porque el computador jugó #{random_answer}"
-elsif player == "tijera" && random_answer == "piedra"
-  puts "Perdiste, porque el computador jugó #{random_answer}"
-elsif player == "papel" && random_answer == "piedra"
-  puts "Ganaste, porque el computador jugó #{random_answer}"
-elsif player == "papel" && random_answer == "tijera"
-  puts "Perdiste, porque el computador jugó #{random_answer}"
+  puts "Empataste, porque tú jugaste #{player} y el computador jugó #{random_answer}"
+elsif (player == "piedra" && random_answer == "tijera") or (player == "tijera" && random_answer == "papel") or (player == "papel" && random_answer == "piedra")
+  puts "Ganaste, porque tú jugaste #{player} y el computador jugó #{random_answer}"
+elsif (player == "tijera" && random_answer == "piedra") or (player == "papel" && random_answer == "tijera") or (player == "piedra" && random_answer == "pape")
+  puts "Perdiste, porque tú jugaste #{player} y el computador jugó #{random_answer}"
 elsif player != "papel" or player != "tijera" or player != "piedra"
   puts "Argumento inválido, debes utilizar piedra, papel o tijera"
 end
